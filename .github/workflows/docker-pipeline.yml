@@ -59,8 +59,6 @@ jobs:
           file: ./Dockerfile
           push: true
           tags: |
-            admiralawkbar/python-builder:latest
-            admiralawkbar/python-builder:v1
             ghcr.io/lukaspersonal/python-builder:latest
             ghcr.io/lukaspersonal/python-builder:v1
             public.ecr.aws/r6v4a7u5/lukas-python-test:latest
