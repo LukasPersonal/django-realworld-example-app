@@ -54,6 +54,9 @@ jobs:
       ###########################################
       - name: Build and push
         uses: docker/build-push-action@v2
+        env:
+          ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
+          ECR_REPOSITORY: lukas-python-test
         with:
           context: .
           file: ./Dockerfile
@@ -63,7 +66,21 @@ jobs:
             admiralawkbar/python-builder:v1
             ghcr.io/lukaspersonal/python-builder:latest
             ghcr.io/lukaspersonal/python-builder:v1
-            public.ecr.aws/r6v4a7u5/lukas-python-test:latest
-            public.ecr.aws/r6v4a7u5/lukas-python-test:v1
+            $ECR_REGISTRY/$ECR_REPOSITORY:latest
+            $ECR_REGISTRY/$ECR_REPOSITORY:v1
 
+
+#  - name: Build, tag, and push image to Amazon ECR
+#       id: build-image
+#       env:
+#         ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
+#         ECR_REPOSITORY: my-ecr-repo
+#         IMAGE_TAG: ${{ github.sha }}
+#       run: |
+#         # Build a docker container and
+#         # push it to ECR so that it can
+#         # be deployed to ECS.
+#         docker build -t $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG .
+#         docker push $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
+#         echo "::set-output name=image::$ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG"
 
