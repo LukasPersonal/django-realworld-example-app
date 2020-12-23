@@ -49,11 +49,11 @@
         },
         "pyjwt": {
             "hashes": [
-                "sha256:5c6eca3c2940464d106b99ba83b00c6add741c9becaec087fb7ccdefea71350e",
-                "sha256:8d59a976fb773f3e6a39c85636357c4f0e242707394cadadd9814f5cbaa20e96"
+                "sha256:5d0ca556ddccb911174502c9ee67b78839668408990483d4cbe9b1d0415d3b5c",
+                "sha256:d138fde3bf7faf3d44dfe880effe29358c23b5162790ab16703f0469ba17a2ab"
             ],
             "index": "pypi",
-            "version": "==1.7.1"
+            "version": "==2.0.0a1"
         },
         "pytz": {
             "hashes": [
@@ -75,7 +75,6 @@
                 "sha256:017cde379adbd6a1f15a61873f43e8274179378e95ef3fede90b5aa64d304ed0",
                 "sha256:0f91fd2e829c44362cbcfab3e9ae12e22badaa8a29ad5ff599f9ec109f0454e8"
             ],
-            "markers": "python_version >= '3.5'",
             "version": "==0.4.1"
         }
     },
